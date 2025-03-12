@@ -13,4 +13,8 @@ class Wallet extends Model
         'owner_id',
         'mony',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
