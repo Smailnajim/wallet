@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\walletController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,4 @@ Route::get('/helloworld', function () {
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [LoginController::class, 'login']);
 Route::middleware('auth:sanctum')->post('logout', [LogoutController::class, 'logout']);
+Route::middleware('auth:sunctum')->post('send', [walletController::class, 'send']);
