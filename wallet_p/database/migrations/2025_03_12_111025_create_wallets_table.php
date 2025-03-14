@@ -17,6 +17,7 @@ class CreateWalletsTable extends Migration
             $table->id();
             $table->foreignId('owner_id')->references('id')->on('users')->onDelete('cascade');
             $table->float('mony')->default(0.00);
+            $table->string('walletRole');
             $table->timestamps();
         });
     }
